@@ -15,23 +15,23 @@ public class FourSum {
         for (int i = 0; i < nums.length - 3; i++) {
             if (i > 0 && nums[i] == nums[i - 1]) continue;
 
-            int newTarget = target - nums[i];
+            int target1 = target - nums[i];
             for (int j = i + 1; j < nums.length - 2; j++) {
                 if (j > i + 1 && nums[j] == nums[j - 1]) continue;
 
-                int newnewTarget = newTarget - nums[j];
+                int target2 = target1 - nums[j];
                 int begin = j + 1;
                 int end = nums.length - 1;
                 while (begin < end) {
-                    if (nums[begin] + nums[end] == newnewTarget) {
+                    if (nums[begin] + nums[end] == target2) {
                         res.add(Arrays.asList(nums[i], nums[j], nums[begin], nums[end]));
                         begin++;
                         end--;
                         while (begin < end && nums[begin] == nums[begin - 1]) begin++;
                         while (begin < end && nums[end] == nums[end + 1]) end--;
-                    } else if (nums[begin] + nums[end] < newnewTarget) {
+                    } else if (nums[begin] + nums[end] < target2) {
                         begin++;
-                    } else if (nums[begin] + nums[end] > newnewTarget) {
+                    } else if (nums[begin] + nums[end] > target2) {
                         end--;
                     }
                 }
