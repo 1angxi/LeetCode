@@ -24,11 +24,10 @@ public class ConvertZ {
         }
 
         for (int i = 0; i < s.length(); i++) {
+            res.get(curRow).append(s.charAt(i));
             if (go) {
-                res.get(curRow).append(s.charAt(i));
                 curRow++;
             } else {
-                res.get(curRow).append(s.charAt(i));
                 curRow--;
             }
 
