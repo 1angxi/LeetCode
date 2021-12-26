@@ -1,4 +1,4 @@
-package com.me.list;
+package com.me.string;
 
 import java.util.ArrayList;
 import java.util.List;
