@@ -1,4 +1,4 @@
-package com.me.list;
+package com.me.sort;
 
 import java.util.Random;
 
