@@ -19,6 +19,7 @@ public class ReverseWords {
 
     /**
      * 模拟整个流程
+     * 由于java字符串不可变，所以必须用辅助空间
      */
     public String reverseWords(String s) {
         int i = 0;
