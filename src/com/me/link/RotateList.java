@@ -39,6 +39,9 @@ public class RotateList {
             tail = tail.next;
         }
 
+        /*
+         * 快慢指针
+         */
         while (tail.next != null) {
             tail = tail.next;
             preK = preK.next;
