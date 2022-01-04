@@ -20,6 +20,10 @@ public class AddTwoNumbers2 {
          */
         Deque<Integer> s1 = new LinkedList<>();
         Deque<Integer> s2 = new LinkedList<>();
+
+        /*
+         * 可以不用s3作为辅助空间，保存头结点，每次新建节点关联头结点
+         */
         Deque<Integer> s3 = new LinkedList<>();
         while (l1 != null) {
             s1.push(l1.val);
