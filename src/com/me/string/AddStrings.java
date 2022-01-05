@@ -47,6 +47,7 @@ public class AddStrings {
             num.append(add % 10);
         }
 
+        //记得最后进位
         if(extra != 0){
             num.append(extra);
         }

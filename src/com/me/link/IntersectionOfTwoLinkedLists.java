@@ -80,4 +80,25 @@ public class IntersectionOfTwoLinkedLists {
             this.next = next;
         }
     }
+
+
+    /**
+     * 诀窍是数学证明：
+     * a + c ， b + c，c是公共链表长度
+     * 那p1走完a+c+b， 那p2走完b+c+a，两指针会刚好相交于目标节点
+     *
+     * 如果没有公共链表，p1和p2走完a+b+c+c后会同时为null
+     */
+    public ListNode getIntersectionNodeV3(ListNode headA, ListNode headB) {
+        if (headA == null || headB == null) {
+            return null;
+        }
+        ListNode pA = headA, pB = headB;
+        while (pA != pB) {
+            pA = pA == null ? headB : pA.next;
+            pB = pB == null ? headA : pB.next;
+        }
+        return pA;
+    }
+
 }

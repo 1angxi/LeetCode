@@ -1,6 +1,5 @@
 package com.me.map;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,22 +19,6 @@ import java.util.Map;
  * @version 2021/12/28
  */
 public class LRUCache {
-
-
-    /**
-     * 诀窍是使用一个数组+双向联调缓存数据。
-     * 其实本质上就是LinkedHashMap的实现原理
-     */
-    class DataNode {
-        int val;
-        int key;
-        DataNode pre, next;
-
-        public DataNode(int key, int val) {
-            this.key = key;
-            this.val = val;
-        }
-    }
 
     private int capacity;
 
