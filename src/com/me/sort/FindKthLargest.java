@@ -43,7 +43,7 @@ public class FindKthLargest {
 
         while (i != j) {
             while (temp <= arr[j] && i < j) {
-                j++;
+                j--;
             }
 
             while (temp >= arr[i] && i < j) {
