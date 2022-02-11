@@ -39,7 +39,7 @@ public class ThreeSumClosest {
                 if (sum > target) {
                     k--;
                 } else {
-                    i++;
+                    j++;
                 }
             }
         }

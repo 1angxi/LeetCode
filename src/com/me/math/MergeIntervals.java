@@ -27,12 +27,7 @@ public class MergeIntervals {
     public int[][] merge(int[][] intervals) {
         List<int[]> res = new ArrayList<>();
 
-        Arrays.sort(intervals, new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                return o1[0] - o2[0];
-            }
-        });
+        Arrays.sort(intervals, (o1, o2) -> o1[0] - o2[0]);
 
         for (int i = 0; i < intervals.length; i++) {
             int l = intervals[i][0], r = intervals[i][1];
